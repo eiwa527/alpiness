@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Test | Typing Game Hub</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="javascript/theme.js" defer></script>
+<script src="javascript/auth.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+<div class="navbar">
+<div class="brand"><div class="brand-badge">TG</div><div><h1>Typing Game Hub</h1><p>Train speed, rhythm, and word skill in one arcade.</p></div></div>
+<div class="nav-actions">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link active" href="typing.html">Typing Test</a>
+<a class="nav-link" href="games.html">Games</a>
+<button class="nav-link theme-toggle" id="themeToggle" type="button">Light Mode</button>
+<button class="nav-link logout-btn" id="logoutBtn" type="button">Log Out</button>
+</div>
+</div>
+
+<section class="page-hero panel">
+<span class="eyebrow">Typing Run</span>
+<h2>Practice on a <span class="gradient-text">dedicated drill page</span>.</h2>
+<p class="lead">Choose a difficulty, load a passage, and work on rhythm, control, and clean finishes without the game room pulling attention away.</p>
+</section>
+
+<section class="typing-layout">
+<div class="panel">
+<div class="section-title"><div><h2>Typing Test</h2><p>Pick a mode and complete the sentence to lock in your final score.</p></div></div>
+<div class="mode-grid">
+<div class="mode-card active-mode" data-mode="easy"><h4>Easy</h4><p>Short everyday phrases to warm up your hands.</p><button class="secondary-btn" onclick="setTypingMode('easy')">Select</button></div>
+<div class="mode-card" data-mode="medium"><h4>Medium</h4><p>Longer thoughts that test consistency and pacing.</p><button class="secondary-btn" onclick="setTypingMode('medium')">Select</button></div>
+<div class="mode-card" data-mode="hard"><h4>Hard</h4><p>Longer lines with punctuation and more control pressure.</p><button class="secondary-btn" onclick="setTypingMode('hard')">Select</button></div>
+</div>
+<div id="text">Press start to load a passage.</div>
+<textarea id="typeInput" placeholder="Your typing appears here..." disabled></textarea>
+<div class="control-row">
+<button class="primary-btn" onclick="startTyping()">Start Run</button>
+<button class="secondary-btn" onclick="resetTyping()">Reset</button>
+</div>
+<div class="typing-status" id="typingStatus">Select a mode, then start when you're ready.</div>
+</div>
+
+<div class="panel">
+<h3>Live Scoreboard</h3>
+<div class="scoreboard">
+<div class="score-card"><span>WPM</span><strong id="wpm">0</strong></div>
+<div class="score-card"><span>Accuracy</span><strong id="accuracy">100%</strong></div>
+<div class="score-card"><span>Time</span><strong id="timer">0.0s</strong></div>
+<div class="score-card"><span>Best</span><strong id="bestWpm">0</strong></div>
+</div>
+<div class="callout">More passages were added to each difficulty so your drills cycle through fresh lines more often.</div>
+<p class="footer-note">Tip: clean accuracy first, then push for a faster finish on the next attempt.</p>
+</div>
+</section>
+<footer class="site-footer">
+<h3>About The Team</h3>
+<div class="footer-grid">
+<div class="footer-card">
+<span class="footer-label">Leader</span>
+<div class="member-links">
+<a class="member-link" href="members/leader.html">
+<strong>Your Name Here</strong>
+<span class="footer-text">Open the leader profile page and add your intro, role, and typing-page contribution.</span>
+</a>
+</div>
+</div>
+<div class="footer-card">
+<span class="footer-label">Group Members</span>
+<div class="member-links">
+<a class="member-link" href="members/member1.html"><strong>Member 1</strong><span class="footer-text">Open page and add name, role, and info.</span></a>
+<a class="member-link" href="members/member2.html"><strong>Member 2</strong><span class="footer-text">Open page and add name, role, and info.</span></a>
+<a class="member-link" href="members/member3.html"><strong>Member 3</strong><span class="footer-text">Open page and add name, role, and info.</span></a>
+</div>
+</div>
+</div>
+<div class="trademark">all rights reserved 2026</div>
+</footer>
+</div>
+<script src="javascript/typing.js"></script>
+</body>
+</html>

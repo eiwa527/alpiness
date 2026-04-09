@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Typing Game Hub</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="javascript/theme.js" defer></script>
+<script src="javascript/auth.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+<div class="navbar">
+<div class="brand"><div class="brand-badge">TG</div><div><h1>Typing Game Hub</h1><p>Train speed, rhythm, and word skill in one arcade.</p></div></div>
+<div class="nav-actions">
+<button class="nav-link theme-toggle" id="themeToggle" type="button">Light Mode</button>
+</div>
+</div>
+
+<section class="login-shell">
+<div class="panel login-card">
+<span class="eyebrow">Secure Access</span>
+<h2>Log in to enter <span class="gradient-text">Typing Game Hub</span>.</h2>
+<p class="lead">Use the shared website account below to open the arcade, typing drills, and team pages.</p>
+<form id="loginForm" class="login-form">
+<label class="login-label" for="username">Username</label>
+<input id="username" name="username" type="text" placeholder="Enter username" autocomplete="username" required>
+<label class="login-label" for="password">Password</label>
+<input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+<button type="submit" class="primary-btn">Log In</button>
+<p class="typing-status" id="loginStatus">Sign in to continue.</p>
+</form>
+<div class="callout">Temporary credentials: <strong>alpiness</strong> / <strong>alpipogi</strong></div>
+</div>
+</section>
+</div>
+</body>
+</html>

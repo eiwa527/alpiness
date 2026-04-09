@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games | Typing Game Hub</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="javascript/theme.js" defer></script>
+<script src="javascript/auth.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+<div class="navbar">
+<div class="brand"><div class="brand-badge">TG</div><div><h1>Typing Game Hub</h1><p>Train speed, rhythm, and word skill in one arcade.</p></div></div>
+<div class="nav-actions">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="typing.html">Typing Test</a>
+<a class="nav-link active" href="games.html">Games</a>
+<button class="nav-link theme-toggle" id="themeToggle" type="button">Light Mode</button>
+<button class="nav-link logout-btn" id="logoutBtn" type="button">Log Out</button>
+</div>
+</div>
+
+<section class="page-hero panel">
+<span class="eyebrow">Game Room</span>
+<h2>Play the <span class="gradient-text">full arcade</span> on its own page.</h2>
+<p class="lead">Every challenge now lives in a dedicated game room with larger word banks, more variety between rounds, and a cleaner layout for rapid switching.</p>
+</section>
+
+<section class="games-layout">
+<div class="panel">
+<div class="section-title"><div><h2>Mini Games</h2><p>Pick a game and it loads into the main arcade area below.</p></div></div>
+<div class="control-row">
+<label class="difficulty-wrap" for="difficultySelect">
+<span class="footer-label">Difficulty</span>
+<select id="difficultySelect" onchange="setDifficulty(this.value)">
+<option value="easy">Easy</option>
+<option value="medium" selected>Medium</option>
+<option value="hard">Hard</option>
+</select>
+</label>
+</div>
+<div class="game-actions">
+<button onclick="startWordRush()">Word Rush</button>
+<button onclick="startWordle()">Wordle</button>
+<button onclick="startScramble()">Scramble</button>
+<button onclick="startQuickTap()">Quick Tap</button>
+<button onclick="startMemoryMatch()">Memory Match</button>
+<button onclick="startSequenceRecall()">Sequence Recall</button>
+<button onclick="startMathSprint()">Math Sprint</button>
+<button onclick="startColorMatch()">Color Match</button>
+<button onclick="startOddOneOut()">Odd One Out</button>
+<button onclick="startFlashType()">Flash Type</button>
+</div>
+<div id="gameArea"></div>
+</div>
+
+<div class="panel">
+<h3>Arcade Tracker</h3>
+<div class="scoreboard">
+<div class="score-card"><span>Total Wins</span><strong id="gamesWon">0</strong></div>
+<div class="score-card"><span>Longest Streak</span><strong id="bestStreak">0</strong></div>
+</div>
+<div class="leaderboard-card">
+<div class="section-title">
+<div>
+<h3>Leaderboard</h3>
+<p>Best local arcade clears based on your recent top performances.</p>
+</div>
+</div>
+<div id="leaderboardList" class="leaderboard-list"></div>
+</div>
+<div class="game-list">
+<div class="game-chip"><div><strong>Word Rush</strong><div class="small-note">More speed words, arcade terms, and action nouns.</div></div></div>
+<div class="game-chip"><div><strong>Wordle</strong><div class="small-note">A larger bank of four-letter challenge words.</div></div></div>
+<div class="game-chip"><div><strong>Scramble</strong><div class="small-note">More long-form words with custom hints.</div></div></div>
+<div class="game-chip"><div><strong>Quick Tap</strong><div class="small-note">Reaction test with the same fast replay loop.</div></div></div>
+<div class="game-chip"><div><strong>Memory Match</strong><div class="small-note">Flip cards and clear the board with fewer moves.</div></div></div>
+<div class="game-chip"><div><strong>Sequence Recall</strong><div class="small-note">Watch a pattern and repeat it without slipping.</div></div></div>
+<div class="game-chip"><div><strong>Math Sprint</strong><div class="small-note">Short arithmetic runs under time pressure.</div></div></div>
+<div class="game-chip"><div><strong>Color Match</strong><div class="small-note">Pick the correct color meaning before time runs out.</div></div></div>
+<div class="game-chip"><div><strong>Odd One Out</strong><div class="small-note">Spot the word that does not belong in the set.</div></div></div>
+<div class="game-chip"><div><strong>Flash Type</strong><div class="small-note">Memorize a phrase quickly, then type it from memory.</div></div></div>
+</div>
+<div id="gameStatus">Pick a game to begin.</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<h3>About The Team</h3>
+<div class="footer-grid">
+<div class="footer-card">
+<span class="footer-label">Leader</span>
+<div class="member-links">
+<a class="member-link" href="members/leader.html">
+<strong>Your Name Here</strong>
+<span class="footer-text">Open the leader profile page and add your intro, role, and arcade concept note.</span>
+</a>
+</div>
+</div>
+<div class="footer-card">
+<span class="footer-label">Group Members</span>
+<div class="member-links">
+<a class="member-link" href="members/member1.html"><strong>Member 1</strong><span class="footer-text">Open page and add name, role, and info.</span></a>
+<a class="member-link" href="members/member2.html"><strong>Member 2</strong><span class="footer-text">Open page and add name, role, and info.</span></a>
+<a class="member-link" href="members/member3.html"><strong>Member 3</strong><span class="footer-text">Open page and add name, role, and info.</span></a>
+</div>
+</div>
+</div>
+<div class="trademark">all rights reserved 2026</div>
+</footer>
+</div>
+<script src="javascript/games.js"></script>
+</body>
+</html>
